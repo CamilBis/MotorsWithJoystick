@@ -11,7 +11,7 @@
 
 #include <IterativeRobot.h>
 #include <SmartDashboard/SendableChooser.h>
-#include <ctre//Phoenix.h>
+#include <ctre/Phoenix.h>
 
 class Robot : public frc::IterativeRobot {
  public:
@@ -36,6 +36,8 @@ class Robot : public frc::IterativeRobot {
   WPI_TalonSRX avant_droit(1);
   WPI_TalonSRX millieu_droit(2);
   WPI_TalonSRX bas_droit(3);
+
+  RobotDrive myDrive();
 
   Joystick *_joystickOne;
 };

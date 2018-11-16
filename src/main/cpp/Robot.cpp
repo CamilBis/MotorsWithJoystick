@@ -17,6 +17,11 @@ void Robot::RobotInit() {
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
   
   _joystickOne = new Joystick(1);
+
+  millieu_gauche.Follow(avant_gauche);
+  bas_gauche.Follow(avant_gauche);
+  millieu_droit.Follow(avant_droit);
+  bas_droit.Follow(avant_droit);
 }
 
 /**
@@ -69,11 +74,7 @@ void Robot::TeleopInit() {
 }
 
 void Robot::TeleopPeriodic() {
-    ArcadeDrive(avant_droit, avant_gauche, _joystickOne);
-    millieu_gauche.Follow(avant_gauche);
-    bas_gauche.Follow(avant_gauche);
-    millieu_droit.Follow(avant_droit);
-    bas_droit.Follow(avant_droit);
+  myDrive.ArcadeDrive(avant_droit, avant_gauche, _joystickOne);
 }
 
 void Robot::TestPeriodic() {}
