@@ -69,8 +69,11 @@ void Robot::TeleopInit() {
 }
 
 void Robot::TeleopPeriodic() {
-    talonFirst.Set(_joystickOne->GetRawAxis(0));
-    talonSecond.Set(_joystickOne->GetRawAxis(1));
+    ArcadeDrive(avant_droit, avant_gauche, _joystickOne);
+    millieu_gauche.Follow(avant_gauche);
+    bas_gauche.Follow(avant_gauche);
+    millieu_droit.Follow(avant_droit);
+    bas_droit.Follow(avant_droit);
 }
 
 void Robot::TestPeriodic() {}
