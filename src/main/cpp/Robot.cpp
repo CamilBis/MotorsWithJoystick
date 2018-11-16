@@ -74,7 +74,7 @@ void Robot::TeleopInit() {
 }
 
 void Robot::TeleopPeriodic() {
-  myDrive.ArcadeDrive(avant_droit, avant_gauche, _joystickOne);
+  myDrive.ArcadeDrive(_joystickOne->GetY(), _joystickOne->GetX());
 }
 
 void Robot::TestPeriodic() {}

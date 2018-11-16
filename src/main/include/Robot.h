@@ -37,7 +37,7 @@ class Robot : public frc::IterativeRobot {
   WPI_TalonSRX millieu_droit(2);
   WPI_TalonSRX bas_droit(3);
 
-  RobotDrive myDrive();
-
   Joystick *_joystickOne;
+
+  RobotDrive myDrive(avant_gauche, avant_droit, _joystickOne);
 };
