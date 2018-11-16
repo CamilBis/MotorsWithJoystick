@@ -69,8 +69,8 @@ void Robot::TeleopInit() {
 }
 
 void Robot::TeleopPeriodic() {
-    victorFirst.Set(_joystickOne->GetRawAxis(0));
-    victorSecond.Set(_joystickOne->GetRawAxis(1));
+    talonFirst.Set(_joystickOne->GetRawAxis(0));
+    talonSecond.Set(_joystickOne->GetRawAxis(1));
 }
 
 void Robot::TestPeriodic() {}
