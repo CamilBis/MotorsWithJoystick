@@ -30,14 +30,5 @@ class Robot : public frc::IterativeRobot {
   const std::string kAutoNameCustom = "My Auto";
   std::string m_autoSelected;
 
-  WPI_TalonSRX avant_gauche(4);
-  WPI_TalonSRX millieu_gauche(5);
-  WPI_TalonSRX bas_gauche(6);
-  WPI_TalonSRX avant_droit(1);
-  WPI_TalonSRX millieu_droit(2);
-  WPI_TalonSRX bas_droit(3);
-
   Joystick *_joystickOne;
-
-  RobotDrive myDrive(avant_gauche, avant_droit, _joystickOne);
 };

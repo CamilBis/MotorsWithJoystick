@@ -16,12 +16,8 @@ void Robot::RobotInit() {
   m_chooser.AddObject(kAutoNameCustom, kAutoNameCustom);
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
   
-  _joystickOne = new Joystick(1);
+  SmartDashboard.putNumber("Joystick X value", _joystickOne.getRawAxis(0));
 
-  millieu_gauche.Follow(avant_gauche);
-  bas_gauche.Follow(avant_gauche);
-  millieu_droit.Follow(avant_droit);
-  bas_droit.Follow(avant_droit);
 }
 
 /**
